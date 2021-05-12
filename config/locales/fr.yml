@@ -1,0 +1,12 @@
+fr:
+  date:
+    day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
+  shops:
+    index:
+      use_case_welcome: Bienvenu dans le cas d'usage de Vincent pour Le Collectionist
+    show:
+      closed: Fermé
+      welcome_message: "Comformément aux mesures gouvernementales et pour votre
+       sécurité, notre magasin continue de vous accueillir dans le respect des
+       gestes barrières aux horaires ci-dessous:"
+      back_to_index: Retour à la liste des Magasins

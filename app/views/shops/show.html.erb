@@ -1,1 +1,24 @@
-<%= @shop.name %>
+<h1 id="shop-name"><%= @shop.name %></h1>
+<div id="centering-container">
+  <p id="shop-info"><%= t('.welcome_message') %></p>
+  <table>
+    <% @ordered_weekdays.each do |day| %>
+      <tr>
+        <td><%= I18n.t('date.day_names')[day] %></td>
+        <td class="opening-hours">
+          <% if @opening_hours.where(day: day).present? %>
+            <% count_openings = 1 %>
+            <% @opening_hours.where(day: day).sort_by(&:start_time).each do |opening| %>
+              <%= opening.start_time + "-" + opening.end_time %>
+              <%= ", " if count_openings < @opening_hours.where(day: day).count %>
+              <% count_openings += 1 %>
+            <% end %>
+          <% else %>
+            <%= t('.closed') %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= link_to ('< ' + t('.back_to_index')), root_path %>
+</div>

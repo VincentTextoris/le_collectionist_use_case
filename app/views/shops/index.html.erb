@@ -1,2 +1,13 @@
-
-<%= @shops.count %>
+<div id="centering-container">
+  <h1 id="index-title"><%= t('.use_case_welcome') %> </h1>
+  <%= image_tag 'logo.png', id: 'logo' %>
+  <ul>
+    <% @shops.each do |shop| %>
+      <h2>
+        <li>
+          <%= link_to shop.name, shop_path(shop.id) %>
+        </li>
+      </h2>
+    <% end %>
+  </ul>
+</div>

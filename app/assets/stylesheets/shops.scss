@@ -1,3 +1,62 @@
 // Place all the styles related to the Shops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  font-family: 'Helvetica neue';
+  cursor: default;
+}
+
+a {
+  text-decoration: none!important;
+  color: #195252;
+}
+
+a:hover {
+  color: #2A8C8C;
+}
+
+tr:first-child {
+  font-weight: 600;
+}
+
+.opening-hours {
+  padding-left: 30px;
+}
+
+table {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#shop-name, #shop-info {
+  text-align: center;
+}
+
+#centering-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: 600px;
+  margin: auto;
+}
+
+#index-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+li {
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px!important;
+}
+
+#logo {
+  margin: auto;
+  max-width: 65%;
+}
